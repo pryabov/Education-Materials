@@ -1,31 +1,24 @@
 ﻿using System.Reflection;
 using Autofac;
-using Autofac.Integration.Mvc;
-using Autofac.Integration.WebApi;
 
 namespace TrivialArchitecture.IoC
 {
-	public class DependencyResolverContainer
-	{
-		public DependencyResolverContainer()
-		{
-			IContainer container = CreateContainer();
+    public class DependencyResolverContainer
+    {
+        public DependencyResolverContainer()
+        {
+            Container = CreateContainer();
+        }
 
-			MvcDependencyResolver = new AutofacDependencyResolver(container);
-			WebApiDependencyResolver = new AutofacWebApiDependencyResolver(container);
-		}
+        public IContainer Container { get; }
 
-		public System.Web.Mvc.IDependencyResolver MvcDependencyResolver { get; }
+        private static IContainer CreateContainer()
+        {
+            ContainerBuilder containerBuilder = new ContainerBuilder();
 
-		public System.Web.Http.Dependencies.IDependencyResolver WebApiDependencyResolver { get; }
+            containerBuilder.RegisterAssemblyModules(Assembly.GetExecutingAssembly());
 
-		private static IContainer CreateContainer()
-		{
-			ContainerBuilder containerBuilder = new ContainerBuilder();
-
-			containerBuilder.RegisterAssemblyModules(Assembly.GetExecutingAssembly());
-
-			return containerBuilder.Build();
-		}
-	}
+            return containerBuilder.Build();
+        }
+    }
 }
