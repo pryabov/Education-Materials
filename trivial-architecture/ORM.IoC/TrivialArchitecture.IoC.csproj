@@ -7,10 +7,11 @@
     <ProjectGuid>{EB45C852-4D37-4793-AC3B-E6309272E311}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ORM.IoC</RootNamespace>
-    <AssemblyName>ORM.IoC</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>TrivialArchitecture.IoC</RootNamespace>
+    <AssemblyName>TrivialArchitecture.IoC</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,8 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac, Version=4.8.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
-      <HintPath>..\packages\Autofac.4.8.0\lib\net45\Autofac.dll</HintPath>
+    <Reference Include="Autofac, Version=4.8.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.8.1\lib\net45\Autofac.dll</HintPath>
     </Reference>
     <Reference Include="Autofac.Integration.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.Mvc5.4.0.2\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
@@ -101,25 +102,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BusinessLogic\ORM.BusinessLogic.Core\ORM.BusinessLogic.Core.csproj">
-      <Project>{36F60717-9EFF-44FB-87AA-3C7D19A55F47}</Project>
-      <Name>ORM.BusinessLogic.Core</Name>
+    <ProjectReference Include="..\TrivialArchitecture.BusinessLogic\TrivialArchitecture.BusinessLogic.csproj">
+      <Project>{2231EB28-5B1E-4B6B-8A53-C96698FD8B3F}</Project>
+      <Name>TrivialArchitecture.BusinessLogic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BusinessLogic\ORM.BusinessLogic.Interfaces\ORM.BusinessLogic.Interfaces.csproj">
-      <Project>{47B5FC36-FA00-4BC1-A5D3-90258A470F12}</Project>
-      <Name>ORM.BusinessLogic.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAL\ORM.DAL.Core\ORM.DAL.Core.csproj">
-      <Project>{8222B3EA-E4CB-43C1-A075-95E3C7ACFF94}</Project>
-      <Name>ORM.DAL.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAL\ORM.DAL.Interfaces\ORM.DAL.Interfaces.csproj">
-      <Project>{DB611539-762A-4140-B781-D23AC1A7C49B}</Project>
-      <Name>ORM.DAL.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAL\ORM.DAL.Repositories\ORM.DAL.Repositories.csproj">
-      <Project>{4FDBF3D6-26B4-4F94-A3BA-8AFF10DF51B7}</Project>
-      <Name>ORM.DAL.Repositories</Name>
+    <ProjectReference Include="..\TrivialArchitecture.DAL\TrivialArchitecture.DAL.csproj">
+      <Project>{9D165D60-7F68-47D4-A06F-7DEDEC706E2C}</Project>
+      <Name>TrivialArchitecture.DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

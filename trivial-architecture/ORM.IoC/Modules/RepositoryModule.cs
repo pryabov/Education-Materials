@@ -1,9 +1,9 @@
 ﻿using Autofac;
-using ORM.DAL.Core;
-using ORM.DAL.Interfaces;
-using ORM.DAL.Repositories;
+using TrivialArchitecture.DAL;
+using TrivialArchitecture.DAL.Interfaces;
+using TrivialArchitecture.DAL.Repositories;
 
-namespace ORM.IoC.Modules
+namespace TrivialArchitecture.IoC.Modules
 {
 	public class RepositoryModule : Module
 	{
@@ -25,8 +25,8 @@ namespace ORM.IoC.Modules
 
 			// Register unit of work.
 			builder
-				.RegisterType<ORMUow>()
-				.As<IORMUow>()
+				.RegisterType<TrivialArchitectureUow>()
+				.As<ITrivialArchitectureUow>()
 				.InstancePerRequest();
 		}
 	}

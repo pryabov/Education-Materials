@@ -6,7 +6,7 @@ using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
 using Module = Autofac.Module;
 
-namespace ORM.IoC.Modules
+namespace TrivialArchitecture.IoC.Modules
 {
 	public class ControllerModule : Module
 	{

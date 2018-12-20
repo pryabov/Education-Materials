@@ -1,7 +1,7 @@
 ﻿using Autofac;
-using ORM.BusinessLogic.Core;
+using TrivialArchitecture.BusinessLogic.Core;
 
-namespace ORM.IoC.Modules
+namespace TrivialArchitecture.IoC.Modules
 {
 	public class ServiceModule : Module
 	{

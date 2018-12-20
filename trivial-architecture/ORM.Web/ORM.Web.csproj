@@ -146,22 +146,6 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BusinessLogic\ORM.BusinessLogic.Interfaces\ORM.BusinessLogic.Interfaces.csproj">
-      <Project>{47B5FC36-FA00-4BC1-A5D3-90258A470F12}</Project>
-      <Name>ORM.BusinessLogic.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAL\ORM.DAL.Core\ORM.DAL.Core.csproj">
-      <Project>{8222B3EA-E4CB-43C1-A075-95E3C7ACFF94}</Project>
-      <Name>ORM.DAL.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAL\ORM.DAL.Interfaces\ORM.DAL.Interfaces.csproj">
-      <Project>{DB611539-762A-4140-B781-D23AC1A7C49B}</Project>
-      <Name>ORM.DAL.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAL\ORM.DAL.Models\ORM.DAL.Models.csproj">
-      <Project>{46BF0602-17BB-4B14-85B3-052112594069}</Project>
-      <Name>ORM.DAL.Models</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ORM.IoC\TrivialArchitecture.IoC.csproj">
       <Project>{EB45C852-4D37-4793-AC3B-E6309272E311}</Project>
       <Name>TrivialArchitecture.IoC</Name>

@@ -42,12 +42,6 @@
     <Compile Include="ICarService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\DAL\ORM.DAL.Models\ORM.DAL.Models.csproj">
-      <Project>{46BF0602-17BB-4B14-85B3-052112594069}</Project>
-      <Name>ORM.DAL.Models</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

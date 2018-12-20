@@ -3,7 +3,7 @@ using Autofac;
 using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
 
-namespace ORM.IoC
+namespace TrivialArchitecture.IoC
 {
 	public class DependencyResolverContainer
 	{

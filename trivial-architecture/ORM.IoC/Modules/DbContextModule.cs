@@ -1,8 +1,8 @@
 ﻿using System.Data.Entity;
 using Autofac;
-using ORM.DAL.Core;
+using TrivialArchitecture.DAL;
 
-namespace ORM.IoC.Modules
+namespace TrivialArchitecture.IoC.Modules
 {
 	public class DbContextModule : Module
 	{
@@ -11,7 +11,7 @@ namespace ORM.IoC.Modules
 			base.Load(builder);
 
 			builder
-				.RegisterType<ORMDbContext>()
+				.RegisterType<TrivialArchitectureDbContext>()
 				.As<DbContext>()
 				.InstancePerRequest();
 		}
