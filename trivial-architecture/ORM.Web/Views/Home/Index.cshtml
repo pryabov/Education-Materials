@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>EF Sample</title>
+	<link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Css/main.css")">
+</head>
+<body>
+	<div class="example">
+		<div data-bind='simpleGrid: gridViewModel'> </div>
+
+		<button data-bind='click: addRandomCar'>Add Random Car</button>
+	</div>
+
+	<script src="@Url.Content("~/Scripts/jquery-3.3.1.min.js")" type="text/javascript"></script>
+	<script src="@Url.Content("~/Scripts/knockout-3.4.2.js")" type="text/javascript"></script>
+	<script src="http://knockoutjs.com/examples/resources/knockout.simpleGrid.3.0.js" type="text/javascript"></script>
+	<script src="@Url.Content("~/Scripts/Custom/mainPage.js")" type="text/javascript"></script>
+</body>
+</html>

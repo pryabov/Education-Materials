@@ -1,0 +1,79 @@
+﻿body {
+	font-family: Arial;
+	font-size: 14px;
+}
+
+.example {
+	padding: 1em;
+	background-color: #EEEEDD;
+	border: 1px solid #CCC;
+	max-width: 655px;
+}
+
+.example input {
+	font-family: Arial;
+}
+
+.example b {
+	font-weight: bold;
+}
+
+.example p {
+	margin-top: 0.9em;
+	margin-bottom: 0.9em;
+}
+
+.example select[multiple] {
+	width: 100%;
+	height: 8em;
+}
+
+.example h2 {
+	margin-top: 0.4em;
+}
+
+.example {
+	height: 20em;
+	overflow: auto;
+}
+
+.ko-grid {
+	margin-bottom: 1em;
+	width: 25em;
+	border: 1px solid silver;
+	background-color: White;
+}
+
+	.ko-grid th {
+		text-align: left;
+		background-color: Black;
+		color: White;
+	}
+
+	.ko-grid td, th {
+		padding: 0.4em;
+	}
+
+	.ko-grid tr:nth-child(odd) {
+		background-color: #DDD;
+	}
+
+.ko-grid-pageLinks {
+	margin-bottom: 1em;
+}
+
+.ko-grid-pageLinks a {
+	padding: 0.5em;
+}
+
+.ko-grid-pageLinks a.selected {
+	background-color: Black;
+	color: White;
+}
+
+/* Mobile Safari reflows pages slowly, so fix the height to avoid the need for reflows */
+
+li {
+	list-style-type: disc;
+	margin-left: 20px;
+}
