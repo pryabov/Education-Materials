@@ -1,3 +1,0 @@
-﻿Add-Migration -project:ORM.DAL.Core -Force
-
-Update-Database -project:ORM.DAL.Core -Force -Verbose

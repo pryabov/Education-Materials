@@ -5,13 +5,13 @@ VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ORM.Web", "ORM.Web\ORM.Web.csproj", "{B8D95E03-32A2-4B22-B2CF-B78E1FACD87A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrivialArchitecture.IoC", "ORM.IoC\TrivialArchitecture.IoC.csproj", "{EB45C852-4D37-4793-AC3B-E6309272E311}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrivialArchitecture.UI.Console", "TrivialArhitecture.UI.Console\TrivialArchitecture.UI.Console.csproj", "{829D4E6B-6993-4ACC-846F-3C3555C93733}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrivialArchitecture.DAL", "TrivialArchitecture.DAL\TrivialArchitecture.DAL.csproj", "{9D165D60-7F68-47D4-A06F-7DEDEC706E2C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrivialArchitecture.BusinessLogic", "TrivialArchitecture.BusinessLogic\TrivialArchitecture.BusinessLogic.csproj", "{2231EB28-5B1E-4B6B-8A53-C96698FD8B3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrivialArchitecture.IoC", "TrivialArchitecture.IoC\TrivialArchitecture.IoC.csproj", "{EB45C852-4D37-4793-AC3B-E6309272E311}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,6 @@ Global
 		{B8D95E03-32A2-4B22-B2CF-B78E1FACD87A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8D95E03-32A2-4B22-B2CF-B78E1FACD87A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8D95E03-32A2-4B22-B2CF-B78E1FACD87A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EB45C852-4D37-4793-AC3B-E6309272E311}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EB45C852-4D37-4793-AC3B-E6309272E311}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EB45C852-4D37-4793-AC3B-E6309272E311}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EB45C852-4D37-4793-AC3B-E6309272E311}.Release|Any CPU.Build.0 = Release|Any CPU
 		{829D4E6B-6993-4ACC-846F-3C3555C93733}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{829D4E6B-6993-4ACC-846F-3C3555C93733}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{829D4E6B-6993-4ACC-846F-3C3555C93733}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{2231EB28-5B1E-4B6B-8A53-C96698FD8B3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2231EB28-5B1E-4B6B-8A53-C96698FD8B3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2231EB28-5B1E-4B6B-8A53-C96698FD8B3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB45C852-4D37-4793-AC3B-E6309272E311}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB45C852-4D37-4793-AC3B-E6309272E311}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB45C852-4D37-4793-AC3B-E6309272E311}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB45C852-4D37-4793-AC3B-E6309272E311}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

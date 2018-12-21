@@ -2,6 +2,7 @@
 using Autofac;
 using NLog;
 using TrivialArchitecture.IoC;
+using TrivialArchitecture.UI.Console.ConsoleProcessing;
 
 namespace TrivialArchitecture.UI.Console
 {
@@ -9,7 +10,7 @@ namespace TrivialArchitecture.UI.Console
 	{
 		public static readonly Logger Logger = LogManager.GetLogger("storageUILogger");
 
-		public static DependencyResolverContainer DependencyResolver { get; }
+		private static DependencyResolverContainer DependencyResolver { get; }
 
 		static Program()
 		{
@@ -18,7 +19,7 @@ namespace TrivialArchitecture.UI.Console
 
 		static void Main(string[] args)
 		{
-			StorageHandler commandHandler = DependencyResolver.Container.Resolve<StorageHandler>();
+			CommandHandler commandHandler = DependencyResolver.Container.Resolve<CommandHandler>();
 
 			string command = GetCommand();
 			while (command != "exit")
