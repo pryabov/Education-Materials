@@ -10,10 +10,16 @@ namespace TrivialArchitecture.IoC.Modules
 		{
 			base.Load(builder);
 
-			Assembly entryAssembly = Assembly.GetExecutingAssembly();
+			Assembly entryAssembly = Assembly.GetEntryAssembly();
 
 			builder
-				.RegisterAssemblyTypes(entryAssembly);
+				.RegisterAssemblyTypes(entryAssembly)
+				.AsImplementedInterfaces()
+				.InstancePerLifetimeScope();
+
+			builder
+				.RegisterAssemblyTypes(entryAssembly)
+				.InstancePerLifetimeScope();
 		}
 	}
 }

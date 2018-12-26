@@ -7,7 +7,8 @@ using TrivialArchitecture.UI.Console.Interfaces;
 
 namespace TrivialArchitecture.UI.Console.ConsoleProcessing
 {
-	sealed class CommandHandler
+	// ReSharper disable once ClassNeverInstantiated.Global
+	public class CommandHandler
 	{
 		private readonly ICommandLineSplitter commandLineSplitter;
 		private readonly IColorfulConsole colorfulConsole;
