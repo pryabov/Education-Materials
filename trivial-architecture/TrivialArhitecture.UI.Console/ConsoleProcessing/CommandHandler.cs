@@ -42,6 +42,14 @@ namespace TrivialArchitecture.UI.Console.ConsoleProcessing
 						ParseCommand(args.Skip(1).ToArray(), CommandEntity.Car);
 						break;
 
+					case "help":
+						colorfulConsole.WriteLineFormatted("{0}", Color.Aquamarine, Color.WhiteSmoke, "Information:");
+						colorfulConsole.WriteLine("This console provides CLI (Command Line Interface) to operate with entities stored in the Database.");
+						colorfulConsole.WriteLine();
+						colorfulConsole.WriteLineFormatted("- {0}", Color.GreenYellow, Color.WhiteSmoke, "cars list");
+						colorfulConsole.WriteLine("  Shows the full list of cars stored in the Database.");
+						break;
+
 					default:
 						throw new ArgumentException($"Command \"{args.First()}\" not recognized. Use help command for more information.");
 				}
