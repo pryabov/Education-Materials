@@ -15,6 +15,5 @@ namespace TrivialArchitecture.DAL.Models.Entities.Books
 		public string Test { get; set; }
 
 		public virtual ICollection<Book> Books { get; set; }
-
 	}
 }

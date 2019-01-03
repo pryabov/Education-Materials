@@ -10,13 +10,13 @@ namespace TrivialArchitecture.DAL
 {
 	public class TrivialArchitectureUow : ITrivialArchitectureUow
 	{
-		private readonly DbContext _dbContext;
-		private readonly ILifetimeScope _lifetimeScope;
+		private readonly DbContext dbContext;
+		private readonly ILifetimeScope lifetimeScope;
 
 		public TrivialArchitectureUow(ILifetimeScope lifetimeScope, DbContext dbContext)
 		{
-			_dbContext = dbContext;
-			_lifetimeScope = lifetimeScope;
+			this.dbContext = dbContext;
+			this.lifetimeScope = lifetimeScope;
 		}
 
 		#region Repositories
@@ -38,7 +38,7 @@ namespace TrivialArchitecture.DAL
 		{
 			try
 			{
-				_dbContext.SaveChanges();
+				dbContext.SaveChanges();
 			}
 			catch (DbEntityValidationException e)
 			{
@@ -61,7 +61,7 @@ namespace TrivialArchitecture.DAL
 
 		private T GetRepository<T>() where T : class
 		{
-			T repository = _lifetimeScope.Resolve<T>();
+			T repository = lifetimeScope.Resolve<T>();
 			return repository;
 		}
 	}

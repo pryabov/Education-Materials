@@ -1,10 +1,9 @@
 ﻿using System.Reflection;
 using Autofac;
-using Module = Autofac.Module;
 
 namespace TrivialArchitecture.IoC.Modules
 {
-	public class ApplicationModule : Module
+	public class ApplicationModule : Autofac.Module
 	{
 		protected override void Load(ContainerBuilder builder)
 		{

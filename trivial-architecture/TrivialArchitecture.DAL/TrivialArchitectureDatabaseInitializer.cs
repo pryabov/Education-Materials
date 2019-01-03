@@ -3,7 +3,7 @@ using TrivialArchitecture.DAL.Migrations;
 
 namespace TrivialArchitecture.DAL
 {
-	public class ORMDatabaseInitializer : MigrateDatabaseToLatestVersion<TrivialArchitectureDbContext, Configuration>
+	public class OrmDatabaseInitializer : MigrateDatabaseToLatestVersion<TrivialArchitectureDbContext, Configuration>
 	{
 
 	}
