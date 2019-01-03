@@ -13,7 +13,7 @@ namespace TrivialArchitecture.DAL
 		public DbSet<Tag> Tags { get; set; }
 
 		public TrivialArchitectureDbContext()
-			: base("ORM")
+			: base("TrivialArchitectureDB")
 		{
 		}
 	}

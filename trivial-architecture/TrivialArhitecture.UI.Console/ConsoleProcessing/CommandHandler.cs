@@ -15,7 +15,7 @@ namespace TrivialArchitecture.UI.Console.ConsoleProcessing
 
 		private enum CommandEntity
 		{
-			NotSpecified = 0,
+			None = 0,
 			Car = 1
 		}
 		
@@ -61,7 +61,7 @@ namespace TrivialArchitecture.UI.Console.ConsoleProcessing
 			}
 		}
 
-		private void ParseCommand(string[] args, CommandEntity commandEntity = CommandEntity.NotSpecified)
+		private void ParseCommand(string[] args, CommandEntity commandEntity = CommandEntity.None)
 		{
 			switch (commandEntity)
 			{
