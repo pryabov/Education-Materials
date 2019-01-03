@@ -3,15 +3,16 @@ using System.Drawing;
 using System.Linq;
 using CommandLine;
 using TrivialArchitecture.UI.Console.CommandLineVerbs;
-using TrivialArchitecture.UI.Console.Interfaces;
+using TrivialArchitecture.UI.Console.Utils.Interfaces;
 
-namespace TrivialArchitecture.UI.Console.ConsoleProcessing
+namespace TrivialArchitecture.UI.Console.CommandHandlers
 {
 	// ReSharper disable once ClassNeverInstantiated.Global
-	public class CommandHandler
+	public class CoreCommandHandler
 	{
 		private readonly ICommandLineSplitter commandLineSplitter;
 		private readonly IColorfulConsole colorfulConsole;
+		private readonly CarsCommandHandler carsCommandHandler;
 
 		private enum CommandEntity
 		{
@@ -19,10 +20,14 @@ namespace TrivialArchitecture.UI.Console.ConsoleProcessing
 			Car = 1
 		}
 		
-		public CommandHandler(ICommandLineSplitter commandLineSplitter, IColorfulConsole colorfulConsole)
+		public CoreCommandHandler(
+			ICommandLineSplitter commandLineSplitter,
+			IColorfulConsole colorfulConsole,
+			CarsCommandHandler carsCommandHandler)
 		{
 			this.commandLineSplitter = commandLineSplitter;
 			this.colorfulConsole = colorfulConsole;
+			this.carsCommandHandler = carsCommandHandler;
 		}
 
 		public void Handle(string commandLine)
@@ -74,7 +79,14 @@ namespace TrivialArchitecture.UI.Console.ConsoleProcessing
 
 		private void PrintEntitiesList(CommandEntity commandEntity)
 		{
-
+			switch (commandEntity)
+			{
+				case CommandEntity.Car:
+					carsCommandHandler.PrintEntitiesList();
+					break;
+				default:
+					throw new ArgumentOutOfRangeException(nameof(commandEntity), commandEntity, null);
+			}
 		}
 	}
 }

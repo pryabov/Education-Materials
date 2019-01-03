@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
-using TrivialArchitecture.UI.Console.Interfaces;
+using TrivialArchitecture.UI.Console.Utils.Interfaces;
 
-namespace TrivialArchitecture.UI.Console.ConsoleProcessing
+namespace TrivialArchitecture.UI.Console.Utils.ConsoleProcessing
 {
 	public class ColorfulConsole : IColorfulConsole
 	{

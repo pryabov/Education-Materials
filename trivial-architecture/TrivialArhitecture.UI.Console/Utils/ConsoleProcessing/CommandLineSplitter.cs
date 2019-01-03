@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using TrivialArchitecture.UI.Console.Interfaces;
+using TrivialArchitecture.UI.Console.Utils.Interfaces;
 
-namespace TrivialArchitecture.UI.Console.ConsoleProcessing
+namespace TrivialArchitecture.UI.Console.Utils.ConsoleProcessing
 {
 	public class CommandLineSplitter : ICommandLineSplitter
 	{

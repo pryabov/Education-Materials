@@ -2,7 +2,7 @@
 using Autofac;
 using NLog;
 using TrivialArchitecture.IoC;
-using TrivialArchitecture.UI.Console.ConsoleProcessing;
+using TrivialArchitecture.UI.Console.CommandHandlers;
 
 namespace TrivialArchitecture.UI.Console
 {
@@ -19,12 +19,12 @@ namespace TrivialArchitecture.UI.Console
 
 		static void Main(string[] args)
 		{
-			CommandHandler commandHandler = DependencyResolver.Container.Resolve<CommandHandler>();
+			CoreCommandHandler coreCommandHandler = DependencyResolver.Container.Resolve<CoreCommandHandler>();
 
 			string command = GetCommand();
 			while (command != "exit")
 			{
-				commandHandler.Handle(command);
+				coreCommandHandler.Handle(command);
 				command = GetCommand();
 			}
 		}

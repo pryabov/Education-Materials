@@ -1,4 +1,4 @@
-﻿namespace TrivialArchitecture.UI.Console.Interfaces
+﻿namespace TrivialArchitecture.UI.Console.Utils.Interfaces
 {
 	public interface ICommandLineSplitter
 	{
