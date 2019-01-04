@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\CustomRepositories\ICarDriversRepository.cs" />
+    <Compile Include="Interfaces\CustomRepositories\ICarsRepository.cs" />
     <Compile Include="Interfaces\ITrivialArchitectureUow.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Migrations\201505260909340_InitializeDB.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Models\Enums\CarColor.cs" />
     <Compile Include="Models\Enums\Language.cs" />
     <Compile Include="Models\IBaseEntity.cs" />
+    <Compile Include="Repositories\CarsRepository.cs" />
     <Compile Include="TrivialArchitectureDatabaseInitializer.cs" />
     <Compile Include="TrivialArchitectureDbContext.cs" />
     <Compile Include="TrivialArchitectureUow.cs" />

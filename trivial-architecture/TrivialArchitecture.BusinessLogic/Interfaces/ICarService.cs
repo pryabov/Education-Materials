@@ -8,5 +8,7 @@ namespace TrivialArchitecture.BusinessLogic.Interfaces
 		IQueryable<Car> GetAll();
 
 		void CreateRandomCar();
+
+		void CreateCar(Car newCar);
 	}
 }

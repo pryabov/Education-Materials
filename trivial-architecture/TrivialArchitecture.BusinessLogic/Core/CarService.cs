@@ -28,9 +28,22 @@ namespace TrivialArchitecture.BusinessLogic.Core
 				Color = CarColor.White
 			};
 
+			CreateCar(newCar);
+		}
+
+		public void CreateCar(Car newCar)
+		{
+			if (newCar == null)
+			{
+				throw new ArgumentNullException(nameof(newCar));
+			}
+
+			Uow.Cars.GetById()
+
 			Uow.Cars.Create(newCar);
 
 			Uow.Commit();
 		}
+
 	}
 }

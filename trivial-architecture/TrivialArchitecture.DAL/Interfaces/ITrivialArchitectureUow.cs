@@ -9,6 +9,6 @@ namespace TrivialArchitecture.DAL.Interfaces
 
 		ICarDriversRepository CarDrivers { get; }
 
-		IRepository<Car> Cars { get; }
+		ICarsRepository Cars { get; }
 	}
 }

@@ -44,7 +44,7 @@ namespace TrivialArchitecture.UI.Console.CommandHandlers
 				switch (args.First())
 				{
 					case "cars":
-						ParseCommand(args.Skip(1).ToArray(), CommandEntity.Car);
+						carsCommandHandler.ParseCommand(args.Skip(1).ToArray());
 						break;
 
 					case "help":
@@ -63,29 +63,6 @@ namespace TrivialArchitecture.UI.Console.CommandHandlers
 			{
 				Program.Logger.Error(exception);
 				colorfulConsole.WriteLineFormatted("{0} " + exception.Message, Color.Red, Color.WhiteSmoke, "ERROR: ");
-			}
-		}
-
-		private void ParseCommand(string[] args, CommandEntity commandEntity = CommandEntity.None)
-		{
-			switch (commandEntity)
-			{
-				case CommandEntity.Car:
-					Parser.Default.ParseArguments<ListCommandLineVerb>(args)
-						.WithParsed<ListCommandLineVerb>(opts => PrintEntitiesList(commandEntity));
-					break;
-			}
-		}
-
-		private void PrintEntitiesList(CommandEntity commandEntity)
-		{
-			switch (commandEntity)
-			{
-				case CommandEntity.Car:
-					carsCommandHandler.PrintEntitiesList();
-					break;
-				default:
-					throw new ArgumentOutOfRangeException(nameof(commandEntity), commandEntity, null);
 			}
 		}
 	}

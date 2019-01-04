@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandHandlers\CarsCommandHandler.cs" />
+    <Compile Include="CommandLineVerbs\AddCarCommandLineVerb.cs" />
     <Compile Include="Utils\ConsoleProcessing\ColorfulConsole.cs" />
     <Compile Include="Utils\ConsoleProcessing\CommandLineSplitter.cs" />
     <Compile Include="CommandLineVerbs\ListCommandLineVerb.cs" />

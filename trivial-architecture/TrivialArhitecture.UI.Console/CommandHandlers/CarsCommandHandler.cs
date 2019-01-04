@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using CommandLine;
 using TrivialArchitecture.BusinessLogic.Interfaces;
 using TrivialArchitecture.DAL.Models.Entities.Cars;
+using TrivialArchitecture.UI.Console.CommandLineVerbs;
 using TrivialArchitecture.UI.Console.Utils.Interfaces;
 
 namespace TrivialArchitecture.UI.Console.CommandHandlers
@@ -16,8 +18,14 @@ namespace TrivialArchitecture.UI.Console.CommandHandlers
 			this.colorfulConsole = colorfulConsole;
 			this.carService = carService;
 		}
+		public void ParseCommand(string[] args)
+		{
+			Parser.Default.ParseArguments<ListCommandLineVerb, AddCarCommandLineVerb>(args)
+				.WithParsed<ListCommandLineVerb>(opts => PrintEntitiesList())
+				.WithParsed<AddCarCommandLineVerb>(AddCar);
+		}
 
-		public void PrintEntitiesList()
+		private void PrintEntitiesList()
 		{
 			List<Car> cars = carService.GetAll().ToList();
 
@@ -34,6 +42,17 @@ namespace TrivialArchitecture.UI.Console.CommandHandlers
 			{
 				colorfulConsole.WriteLine("---- No Items ----");
 			}
+		}
+
+		private void AddCar(AddCarCommandLineVerb opts)
+		{
+			carService.CreateCar(new Car
+			{
+				Brand = opts.Brand,
+				Color = opts.Color,
+				Number = opts.Number,
+				Odometer = opts.Odometer
+			});
 		}
 	}
 }
