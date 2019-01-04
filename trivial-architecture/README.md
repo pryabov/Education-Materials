@@ -35,6 +35,7 @@ Follow steps below:
 1. In *SSMS* create Database `TrivialArchitecture`. Current system user should be an owner
 2. On Visual Studio in Package Manager Console type command:
 PowerShell
+```
 Update-Database -project:TrivialArchitecture.DAL -Force -Verbose
 ```
 3. Run `TrivialArchitecture.UI.Console` project
