@@ -1,6 +1,6 @@
-# Console Application with Trivial Architecture
+# Console Application with Architecture Sample
 
-Before running an application make sure that the database was created and all migrations were applied.
+Before running the application make sure that the database was created and all migrations were applied.
 
 ## Application Functionality
 
@@ -19,7 +19,7 @@ cars add -n number -o 123 -b Lada -c Black
 cars list
 ```
 
-## Entity Framework - Code First Usage Example
+## Entity Framework (Code First) Usage Example
 
 This is a brief example which shows how Entity Framework could be used in your project.
 
