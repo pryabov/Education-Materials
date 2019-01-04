@@ -14,6 +14,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1FD2A975-DB8D-4FB9-B3AD-2234C208E119}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		README.md = README.md
 		TrivialArchitecture.sln.DotSettings = TrivialArchitecture.sln.DotSettings
 	EndProjectSection
 EndProject

@@ -25,7 +25,7 @@ namespace TrivialArchitecture.DAL
 
 		public ICarDriversRepository CarDrivers => GetRepository<ICarDriversRepository>();
 
-		public IRepository<Car> Cars => GetRepository<IRepository<Car>>();
+		public ICarsRepository Cars => GetRepository<ICarsRepository>();
 
 		#endregion MsSQL
 

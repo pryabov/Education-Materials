@@ -38,10 +38,13 @@ namespace TrivialArchitecture.BusinessLogic.Core
 				throw new ArgumentNullException(nameof(newCar));
 			}
 
-			Uow.Cars.GetById()
+			Car carByNumber = Uow.Cars.GetByNumber(newCar.Number);
+			if (carByNumber != null)
+			{
+				throw new InvalidOperationException($"Car number '{newCar.Number}' already exists.");
+			}
 
 			Uow.Cars.Create(newCar);
-
 			Uow.Commit();
 		}
 
