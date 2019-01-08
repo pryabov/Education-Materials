@@ -1,5 +1,5 @@
 ﻿using CommandLine;
-using TrivialArchitecture.DAL.Models.Enums;
+using TrivialArchitecture.DAL.Entities.Cars.Enums;
 
 namespace TrivialArchitecture.UI.Console.CommandLineVerbs
 {

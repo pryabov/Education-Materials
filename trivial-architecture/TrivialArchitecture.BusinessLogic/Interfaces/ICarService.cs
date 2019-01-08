@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using TrivialArchitecture.DAL.Models.Entities.Cars;
+using TrivialArchitecture.DAL.Entities.Cars;
 
 namespace TrivialArchitecture.BusinessLogic.Interfaces
 {

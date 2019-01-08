@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrivialArchitecture.DAL", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrivialArchitecture.BusinessLogic", "TrivialArchitecture.BusinessLogic\TrivialArchitecture.BusinessLogic.csproj", "{2231EB28-5B1E-4B6B-8A53-C96698FD8B3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrivialArchitecture.IoC", "TrivialArchitecture.IoC\TrivialArchitecture.IoC.csproj", "{EB45C852-4D37-4793-AC3B-E6309272E311}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1FD2A975-DB8D-4FB9-B3AD-2234C208E119}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
@@ -36,10 +34,6 @@ Global
 		{2231EB28-5B1E-4B6B-8A53-C96698FD8B3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2231EB28-5B1E-4B6B-8A53-C96698FD8B3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2231EB28-5B1E-4B6B-8A53-C96698FD8B3F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EB45C852-4D37-4793-AC3B-E6309272E311}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EB45C852-4D37-4793-AC3B-E6309272E311}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EB45C852-4D37-4793-AC3B-E6309272E311}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EB45C852-4D37-4793-AC3B-E6309272E311}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

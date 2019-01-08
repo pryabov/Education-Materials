@@ -1,8 +1,8 @@
 ﻿using System;
 using Autofac;
 using NLog;
-using TrivialArchitecture.IoC;
 using TrivialArchitecture.UI.Console.CommandHandlers;
+using TrivialArchitecture.UI.Console.Infrastructure.IoC;
 
 namespace TrivialArchitecture.UI.Console
 {
@@ -17,7 +17,7 @@ namespace TrivialArchitecture.UI.Console
 			DependencyResolver = new DependencyResolverContainer();
 		}
 
-		static void Main(string[] args)
+		static void Main()
 		{
 			CoreCommandHandler coreCommandHandler = DependencyResolver.Container.Resolve<CoreCommandHandler>();
 

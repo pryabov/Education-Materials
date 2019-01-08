@@ -2,7 +2,7 @@
 using System.Linq;
 using CommandLine;
 using TrivialArchitecture.BusinessLogic.Interfaces;
-using TrivialArchitecture.DAL.Models.Entities.Cars;
+using TrivialArchitecture.DAL.Entities.Cars;
 using TrivialArchitecture.UI.Console.CommandLineVerbs;
 using TrivialArchitecture.UI.Console.Utils.Interfaces;
 

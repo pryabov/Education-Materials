@@ -51,27 +51,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\CustomRepositories\ICarDriversRepository.cs" />
-    <Compile Include="Interfaces\CustomRepositories\ICarsRepository.cs" />
-    <Compile Include="Interfaces\ITrivialArchitectureUow.cs" />
-    <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ICarDriversRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ICarsRepository.cs" />
+    <Compile Include="ITrivialArchitectureUow.cs" />
+    <Compile Include="Repositories\Interfaces\IRepository.cs" />
     <Compile Include="Migrations\201505260909340_InitializeDB.cs" />
     <Compile Include="Migrations\201505260909340_InitializeDB.Designer.cs">
       <DependentUpon>201505260909340_InitializeDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Entities\Books\Author.cs" />
-    <Compile Include="Models\Entities\Books\Book.cs" />
-    <Compile Include="Models\Entities\Books\Publisher.cs" />
-    <Compile Include="Models\Entities\Books\Tag.cs" />
-    <Compile Include="Models\Entities\Cars\Car.cs" />
-    <Compile Include="Models\Entities\Cars\CarDriver.cs" />
-    <Compile Include="Models\Entities\Cars\PassengerCar.cs" />
-    <Compile Include="Models\Entities\Cars\Truck.cs" />
-    <Compile Include="Models\Enums\CarBrand.cs" />
-    <Compile Include="Models\Enums\CarColor.cs" />
-    <Compile Include="Models\Enums\Language.cs" />
-    <Compile Include="Models\IBaseEntity.cs" />
+    <Compile Include="Entities\Books\Author.cs" />
+    <Compile Include="Entities\Books\Book.cs" />
+    <Compile Include="Entities\Books\Publisher.cs" />
+    <Compile Include="Entities\Books\Tag.cs" />
+    <Compile Include="Entities\Cars\Car.cs" />
+    <Compile Include="Entities\Cars\CarDriver.cs" />
+    <Compile Include="Entities\Cars\PassengerCar.cs" />
+    <Compile Include="Entities\Cars\Truck.cs" />
+    <Compile Include="Entities\Cars\Enums\CarBrand.cs" />
+    <Compile Include="Entities\Cars\Enums\CarColor.cs" />
+    <Compile Include="Entities\Books\Enums\Language.cs" />
+    <Compile Include="Entities\IBaseEntity.cs" />
     <Compile Include="Repositories\CarsRepository.cs" />
     <Compile Include="TrivialArchitectureDatabaseInitializer.cs" />
     <Compile Include="TrivialArchitectureDbContext.cs" />
@@ -91,5 +91,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -110,6 +110,11 @@
   <ItemGroup>
     <Compile Include="CommandHandlers\CarsCommandHandler.cs" />
     <Compile Include="CommandLineVerbs\AddCarCommandLineVerb.cs" />
+    <Compile Include="Infrastructure\IoC\DependencyResolverContainer.cs" />
+    <Compile Include="Infrastructure\IoC\Modules\ApplicationModule.cs" />
+    <Compile Include="Infrastructure\IoC\Modules\DbContextModule.cs" />
+    <Compile Include="Infrastructure\IoC\Modules\RepositoryModule.cs" />
+    <Compile Include="Infrastructure\IoC\Modules\ServiceModule.cs" />
     <Compile Include="Utils\ConsoleProcessing\ColorfulConsole.cs" />
     <Compile Include="Utils\ConsoleProcessing\CommandLineSplitter.cs" />
     <Compile Include="CommandLineVerbs\ListCommandLineVerb.cs" />
@@ -133,10 +138,6 @@
     <ProjectReference Include="..\TrivialArchitecture.DAL\TrivialArchitecture.DAL.csproj">
       <Project>{9D165D60-7F68-47D4-A06F-7DEDEC706E2C}</Project>
       <Name>TrivialArchitecture.DAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TrivialArchitecture.IoC\TrivialArchitecture.IoC.csproj">
-      <Project>{eb45c852-4d37-4793-ac3b-e6309272e311}</Project>
-      <Name>TrivialArchitecture.IoC</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
-using TrivialArchitecture.DAL.Models.Entities.Books;
-using TrivialArchitecture.DAL.Models.Entities.Cars;
+using TrivialArchitecture.DAL.Entities.Books;
+using TrivialArchitecture.DAL.Entities.Cars;
 
 namespace TrivialArchitecture.DAL
 {

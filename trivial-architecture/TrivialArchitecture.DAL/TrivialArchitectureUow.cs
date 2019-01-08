@@ -2,9 +2,7 @@
 using System.Data.Entity;
 using System.Data.Entity.Validation;
 using Autofac;
-using TrivialArchitecture.DAL.Interfaces;
-using TrivialArchitecture.DAL.Interfaces.CustomRepositories;
-using TrivialArchitecture.DAL.Models.Entities.Cars;
+using TrivialArchitecture.DAL.Repositories.Interfaces;
 
 namespace TrivialArchitecture.DAL
 {

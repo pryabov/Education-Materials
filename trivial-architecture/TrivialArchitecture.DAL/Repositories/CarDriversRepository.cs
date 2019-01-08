@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
-using TrivialArchitecture.DAL.Interfaces.CustomRepositories;
-using TrivialArchitecture.DAL.Models.Entities.Cars;
+using TrivialArchitecture.DAL.Entities.Cars;
+using TrivialArchitecture.DAL.Repositories.Interfaces;
 
 namespace TrivialArchitecture.DAL.Repositories
 {
