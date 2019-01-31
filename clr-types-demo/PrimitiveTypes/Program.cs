@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PrimitiveTypes
+﻿namespace PrimitiveTypes
 {
     internal class Program
     {

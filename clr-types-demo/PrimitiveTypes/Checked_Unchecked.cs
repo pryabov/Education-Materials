@@ -11,7 +11,6 @@
                 b = (byte)(b + 200);
             }
             uint a = unchecked((uint)-1);
-            ;
         }
     }
 }
