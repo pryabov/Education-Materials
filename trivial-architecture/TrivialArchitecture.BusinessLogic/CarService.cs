@@ -47,6 +47,5 @@ namespace TrivialArchitecture.BusinessLogic
 			Uow.Cars.Create(newCar);
 			Uow.Commit();
 		}
-
 	}
 }
