@@ -1,0 +1,3 @@
+﻿Add-Migration -project:TrivialArchitecture.DAL -Force
+
+Update-Database -project:TrivialArchitecture.DAL -Force -Verbose
