@@ -1,21 +1,22 @@
 # Console Application with Architecture Sample
 
-Before running the application make sure that the database was created and all migrations were applied.
+Before running the application make sure that the database was created and all migrations have been applied.
 
 ## Application Functionality
 
 The application is CLI which provides functionality to operate database entities.
 
 Available commands:
-```
+
+```cmd
 help
 ```
 
-```
+```cmd
 cars add -n number -o 123 -b Lada -c Black
 ```
 
-```
+```cmd
 cars list
 ```
 
@@ -23,16 +24,20 @@ cars list
 
 This is a brief example which shows how Entity Framework could be used in your project.
 
-Think about it only like about an example no rules only ideas.
+Think about it only like about an example there is no rules only ideas.
 
-To start using *Sample Project* you need to have on PC:
+### Software pre-requirements
 
-+ *Microsoft SQL Server 2016* or higher with *SSMS* (SQL Server Management Studio)
-+ Visual Studio 2022
+To start using *Sample Project* for education purposes you need to have on PC:
 
-Follow steps below:
++ [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
++ [*Microsoft SQL Server 2019 Developer Edition* or higher](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
++ [*SSMS* (SQL Server Management Studio) can be helpful for you as well](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15)
++ [Visual Studio 2022 Community](https://visualstudio.microsoft.com/vs/) as IDE. There can be any other IDE for .NET which you are prefer.
 
-1. In *SSMS* create Database `TrivialArchitecture`. Current system user should be an owner
+### Follow steps below
+
+1. In *SSMS* create Database `TrivialArchitecture`. The current system user should be an owner;
 2. On Visual Studio in Package Manager Console type command:
 ```cmd
 
