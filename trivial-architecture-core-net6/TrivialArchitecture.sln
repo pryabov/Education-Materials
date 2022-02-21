@@ -1,18 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29709.97
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrivialArchitecture.UI.Console", "TrivialArchitecture.UI.Console\TrivialArchitecture.UI.Console.csproj", "{F57479D8-0D53-4340-BE15-7DFA6A84D2F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrivialArchitecture.UI.Console", "src\TrivialArchitecture.UI.Console\TrivialArchitecture.UI.Console.csproj", "{F57479D8-0D53-4340-BE15-7DFA6A84D2F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrivialArchitecture.DAL", "TrivialArchitecture.DAL\TrivialArchitecture.DAL.csproj", "{B11E1BA6-0F1D-4EB8-9D03-66D6E8DE7BF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrivialArchitecture.DAL", "src\TrivialArchitecture.DAL\TrivialArchitecture.DAL.csproj", "{B11E1BA6-0F1D-4EB8-9D03-66D6E8DE7BF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrivialArchitecture.BusinessLogic", "TrivialArchitecture.BusinessLogic\TrivialArchitecture.BusinessLogic.csproj", "{50415BDE-2DF4-4E81-A367-CE629B6044C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrivialArchitecture.BusinessLogic", "src\TrivialArchitecture.BusinessLogic\TrivialArchitecture.BusinessLogic.csproj", "{50415BDE-2DF4-4E81-A367-CE629B6044C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrivialArchitecture.Common", "TrivialArchitecture.Common\TrivialArchitecture.Common.csproj", "{6514E7E2-BF39-4AB3-9A9C-9B493606E36B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrivialArchitecture.Common", "src\TrivialArchitecture.Common\TrivialArchitecture.Common.csproj", "{6514E7E2-BF39-4AB3-9A9C-9B493606E36B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2F1CB225-5D9D-4BDD-A64D-C607DE0D836D}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		README.md = README.md
 	EndProjectSection
 EndProject
