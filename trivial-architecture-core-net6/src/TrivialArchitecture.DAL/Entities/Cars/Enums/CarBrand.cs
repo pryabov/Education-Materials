@@ -2,9 +2,10 @@
 {
 	public enum CarBrand
 	{
-		// Numbering not from 0 important in the reason of 0 is default value for enum.
+		// Starting numbers not from 0 important due the reason that 0 is the default value for enum.
 		// When numbering starts from other number it prevents issues with forgotten initialization.
-		None = 0,
+		NotSpecified = 0,
+
 		Lada = 1,
 		Maz = 2,
 		Volga = 3

@@ -12,7 +12,7 @@ namespace TrivialArchitecture.DAL.EntityTypeConfigurations.Cars
 
 			builder.HasMany(item => item.CarDrivers);
 
-			// https://www.learnentityframeworkcore.com/inheritance
+			// https://docs.microsoft.com/en-us/ef/core/modeling/inheritance
 			builder.HasDiscriminator<int>("Type")
 				.HasValue<Car>(1)
 				.HasValue<Truck>(2)

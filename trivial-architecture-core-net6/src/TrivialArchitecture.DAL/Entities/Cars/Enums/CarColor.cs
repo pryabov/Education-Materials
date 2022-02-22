@@ -2,7 +2,8 @@
 {
 	public enum CarColor
 	{
-		None = 0,
+		NotSpecified = 0,
+
 		Black =1,
 		White = 2
 	}

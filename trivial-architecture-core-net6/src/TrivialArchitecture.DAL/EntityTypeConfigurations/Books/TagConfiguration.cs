@@ -8,9 +8,8 @@ namespace TrivialArchitecture.DAL.EntityTypeConfigurations.Books
 	{
 		public void Configure(EntityTypeBuilder<Tag> builder)
 		{
-			builder.ToTable("Tags");
-
-			builder.HasMany(item => item.Books);
+			builder.ToTable("Tags")
+				.HasMany(item => item.Books);
 		}
 	}
 }
