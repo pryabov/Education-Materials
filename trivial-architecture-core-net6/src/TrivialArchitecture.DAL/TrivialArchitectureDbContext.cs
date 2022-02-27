@@ -46,16 +46,5 @@ namespace TrivialArchitecture.DAL
 		{
 			modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 		}
-
-		// protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-		// {
-		// 	base.OnConfiguring(optionsBuilder);
-		//
-		// 	optionsBuilder
-		// 		.UseSqlServer(
-		// 			@"Data Source=.\;Initial Catalog=TrivialArchitecture;Integrated Security=true"
-		// 			, providerOptions => providerOptions.CommandTimeout(60))
-		// 		.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
-		// }
 	}
 }

@@ -1,4 +1,4 @@
-# Console Application with Architecture Sample
+# Console Application with Architecture Sample (.NET 6 + EF Core)
 
 Before running the application make sure that the database was created and all migrations have been applied.
 
@@ -35,24 +35,31 @@ To start using *Sample Project* for education purposes you need to have on PC:
 + [*SSMS* (SQL Server Management Studio) can be helpful for you as well](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15)
 + [Visual Studio 2022 Community](https://visualstudio.microsoft.com/vs/) as IDE. There can be any other IDE for .NET which you are prefer.
 
-### Follow steps below
+### Steps for the first run
 
 This example will be based on [cli tools for Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/cli/dotnet) to apply migrations to Database as tool supported on many platforms and recomended by Microsoft.
 But if you like to work inside Visual Studio IDE you still can use [the Package Manager Console (PMC) tools for Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/cli/powershell).
 
 
-1. In *SSMS* create Database `TrivialArchitecture`. The current system user should be an owner;
-2. On Visual Studio in Package Manager Console type command:
-
-```cli
-dotnet ef migrations add InitialCreate --project src\TrivialArchitecture.DAL\TrivialArchitecture.DAL.csproj --startup-project src\TrivialArchitecture.UI.Console\TrivialArchitecture.UI.Console.csproj
-```
-
-```cli
+1. In cmd type use command to create and updae database
+```cmd
 dotnet ef database update --project src\TrivialArchitecture.DAL\TrivialArchitecture.DAL.csproj --startup-project src\TrivialArchitecture.UI.Console\TrivialArchitecture.UI.Console.csproj
 ```
 
-3. Run `TrivialArchitecture.UI.Console` project
+2. Run `TrivialArchitecture.UI.Console` project
 
-### Links
+### HOw-TO
+
+#### EF cli tool installation
+
+```cmd
 dotnet tool update --global dotnet-ef
+```
+
+#### Initial Migration Creation
+
+For creating initial migration was used cmd command below.
+
+```cmd
+dotnet ef migrations add InitialCreate --project src\TrivialArchitecture.DAL\TrivialArchitecture.DAL.csproj --startup-project src\TrivialArchitecture.UI.Console\TrivialArchitecture.UI.Console.csproj
+```
