@@ -1,11 +1,12 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using TrivialArchitecture.DAL.Entities.Cars;
 
 namespace TrivialArchitecture.BusinessLogic.Interfaces
 {
 	public interface ICarService
 	{
-		IQueryable<Car> GetAll();
+		IList<Car> GetAll();
 
 		void CreateRandomCar();
 

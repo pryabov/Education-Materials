@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using ProtoBuf;
 using TrivialArchitecture.DAL.Base.Enums;
 using TrivialArchitecture.DAL.Entities;
+using TrivialArchitecture.DAL.Entities.Cars;
 
 namespace TrivialArchitecture.DAL.Base
 {
@@ -11,6 +14,21 @@ namespace TrivialArchitecture.DAL.Base
 		private readonly Dictionary<Type, List<EntityEntry>> state = new();
 
 		public bool IsLoaded { get; protected set; }
+
+		public DbContext()
+		{
+			IsLoaded = false;
+		}
+
+		internal List<EntityEntry> GetState(Type type)
+		{
+			if (!IsLoaded)
+			{
+				Load();
+			}
+
+			return state[type];
+		}
 
 		public DbSet<T> Set<T>() where T : class, IBaseEntity<long>
 		{
@@ -39,7 +57,10 @@ namespace TrivialArchitecture.DAL.Base
 		{
 			if (!IsLoaded)
 			{
-				// TODO: Load from file
+				using (FileStream fsSource = File.Open("", FileMode.OpenOrCreate, FileAccess.Read))
+				{
+					Car deserialize = Serializer.Deserialize<Car>(fsSource);
+				}
 			}
 		}
 
@@ -55,7 +76,7 @@ namespace TrivialArchitecture.DAL.Base
 
 				if (changedEntities.Count > 0)
 				{
-					// TODO: Save
+					
 				}
 			}
 		}

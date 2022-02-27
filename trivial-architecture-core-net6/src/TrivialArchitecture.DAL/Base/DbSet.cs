@@ -7,34 +7,37 @@ using TrivialArchitecture.DAL.Entities;
 
 namespace TrivialArchitecture.DAL.Base
 {
-	public class DbSet<T>: IList<T> where T : class, IBaseEntity<long>
+	public class DbSet<T> : IList<T> where T : class, IBaseEntity<long>
 	{
 		private readonly DbContext dbContext;
-		private readonly Lazy<List<EntityEntry>> entityEntries = new Lazy<List<EntityEntry>>();
-		private readonly Lazy<List<T>> entities;
+		private List<EntityEntry> entityEntries;
+		private List<T> entities;
 
 		public DbSet(DbContext dbContext)
 		{
 			this.dbContext = dbContext;
-			this.entityEntries = this.dbContext;
-			entities = entityEntries.Select(item => item.Entity as T).ToList();
 		}
 
 		#region IList{T}
 
 		public IEnumerator<T> GetEnumerator()
 		{
-			if(dbContext.)
+			LoadEntitiesIfNeeded();
+
 			return entities.GetEnumerator();
 		}
 
 		IEnumerator IEnumerable.GetEnumerator()
 		{
+			LoadEntitiesIfNeeded();
+
 			return entities.GetEnumerator();
 		}
 
 		public void Add(T item)
 		{
+			LoadEntitiesIfNeeded();
+
 			entities.Add(item);
 			entityEntries.Add(new EntityEntry()
 			{
@@ -61,6 +64,8 @@ namespace TrivialArchitecture.DAL.Base
 
 		public bool Remove(T item)
 		{
+			LoadEntitiesIfNeeded();
+
 			entities.Remove(item);
 			int index = entityEntries.FindIndex(entryEntity => entryEntity.Entity == item);
 			if (index > 0)
@@ -97,5 +102,14 @@ namespace TrivialArchitecture.DAL.Base
 		}
 
 		#endregion
+
+		private void LoadEntitiesIfNeeded()
+		{
+			if (entityEntries != null)
+			{
+				entityEntries = dbContext.GetState(typeof(T));
+				entities = entityEntries.Select(item => item.Entity as T).ToList();
+			}
+		}
 	}
 }
