@@ -1,6 +1,6 @@
 ﻿namespace TrivialArchitecture.DAL.Base.Enums
 {
-	internal enum EntityState
+	public enum EntityState
 	{
 		NotSpecified = 0,
 

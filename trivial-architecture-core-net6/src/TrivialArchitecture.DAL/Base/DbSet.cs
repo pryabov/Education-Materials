@@ -2,17 +2,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using TrivialArchitecture.DAL.Entities;
-using TrivialArchitecture.DAL.Interfaces;
 
 namespace TrivialArchitecture.DAL.Base
 {
 	public class DbSet<T>: IList<T> where T : class, IBaseEntity<long>
 	{
-		private readonly DbContext dbContext;
+		private readonly EntityEntry<T> entityEntries;
 
-		public DbSet(DbContext dbContext)
+		public DbSet(List<EntityEntry> entityEntries)
 		{
-			this.dbContext = dbContext;
+			this.entityEntries = entityEntries;
 		}
 
 		#region IList{T}

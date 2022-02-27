@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TrivialArchitecture.DAL.Base;
+using TrivialArchitecture.DAL.Entities;
 
 namespace TrivialArchitecture.DAL.Interfaces
 {
@@ -11,9 +12,10 @@ namespace TrivialArchitecture.DAL.Interfaces
 	{
 		private Dictionary<Type, List<EntityEntry>> state = new();
 
-		public DbSet<T> Set<T>() where T : class
+		public DbSet<T> Set<T>() where T : class, IBaseEntity<long>
 		{
-			throw new NotImplementedException();
+			DbSet<T> result = new DbSet<T>(state[typeof(T)]);
+			return result;
 		}
 
 		public EntityEntry Entry<T>(T entity) where T : class
