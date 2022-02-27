@@ -20,7 +20,7 @@ cars add -n number -o 123 -b Lada -c Black
 cars list
 ```
 
-## Entity Framework (Code First) Usage Example
+## Example Usage
 
 This is a brief example which shows how Entity Framework Core could be used in your project.
 
@@ -48,7 +48,7 @@ dotnet ef database update --project src\TrivialArchitecture.DAL\TrivialArchitect
 
 2. Run `TrivialArchitecture.UI.Console` project
 
-### HOw-TO
+### HOW-TO
 
 #### EF cli tool installation
 
