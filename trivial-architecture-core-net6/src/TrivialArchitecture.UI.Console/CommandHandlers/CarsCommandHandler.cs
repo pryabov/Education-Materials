@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using CommandLine;
 using TrivialArchitecture.BusinessLogic.Interfaces;
@@ -21,11 +22,11 @@ namespace TrivialArchitecture.UI.Console.CommandHandlers
 		public void ParseCommand(string[] args)
 		{
 			Parser.Default.ParseArguments<ListCommandLineVerb, AddCarCommandLineVerb>(args)
-				.WithParsed<ListCommandLineVerb>(opts => PrintEntitiesList())
+				.WithParsed<ListCommandLineVerb>(PrintEntitiesList)
 				.WithParsed<AddCarCommandLineVerb>(AddCar);
 		}
 
-		private void PrintEntitiesList()
+		private void PrintEntitiesList(ListCommandLineVerb opts)
 		{
 			List<Car> cars = carService.GetAll().ToList();
 
@@ -33,7 +34,7 @@ namespace TrivialArchitecture.UI.Console.CommandHandlers
 			{
 				foreach (Car car in cars)
 				{
-					colorfulConsole.WriteLine($"Brand: {car.Brand}; Number: {car.Number}; Color: {car.Color}; Odometer: {car.Odometer}.");
+					colorfulConsole.WriteLineFormatted($"Brand: {car.Brand}; Number: {car.Number}; Color: {car.Color}; Odometer: {car.Odometer}.", Color.DarkGreen, Color.DarkGreen);
 				}
 
 				colorfulConsole.WriteLine(string.Empty);

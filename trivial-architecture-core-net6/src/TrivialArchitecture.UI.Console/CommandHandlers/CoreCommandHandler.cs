@@ -14,7 +14,7 @@ namespace TrivialArchitecture.UI.Console.CommandHandlers
 
 		private enum CommandEntity
 		{
-			None = 0,
+			NotSpecified = 0,
 			Car = 1
 		}
 		
@@ -51,6 +51,9 @@ namespace TrivialArchitecture.UI.Console.CommandHandlers
 						colorfulConsole.WriteLine();
 						colorfulConsole.WriteLineFormatted("- {0}", Color.GreenYellow, Color.WhiteSmoke, "cars list");
 						colorfulConsole.WriteLine("  Shows the full list of cars stored in the Database.");
+						colorfulConsole.WriteLine();
+						colorfulConsole.WriteLineFormatted("- {0}", Color.GreenYellow, Color.WhiteSmoke, "cars add");
+						colorfulConsole.WriteLine("  Add a new car to database.");
 						break;
 
 					default:
