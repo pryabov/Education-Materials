@@ -45,8 +45,13 @@ But if you like to work inside Visual Studio IDE you still can use [the Package 
 2. On Visual Studio in Package Manager Console type command:
 
 ```cli
-dotnet ef migrations add InitialCreate --project src\TrivialArchitecture.DAL\TrivialArchitecture.DAL.csproj
+dotnet ef migrations add InitialCreate --project src\TrivialArchitecture.DAL\TrivialArchitecture.DAL.csproj --startup-project src\TrivialArchitecture.UI.Console\TrivialArchitecture.UI.Console.csproj
 ```
+
+```cli
+dotnet ef database update --project src\TrivialArchitecture.DAL\TrivialArchitecture.DAL.csproj --startup-project src\TrivialArchitecture.UI.Console\TrivialArchitecture.UI.Console.csproj
+```
+
 3. Run `TrivialArchitecture.UI.Console` project
 
 ### Links

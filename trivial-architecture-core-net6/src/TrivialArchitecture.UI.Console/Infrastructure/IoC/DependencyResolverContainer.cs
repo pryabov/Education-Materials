@@ -40,12 +40,10 @@ namespace TrivialArchitecture.UI.Console.Infrastructure.IoC
 				.As<IModule>()
 				.PropertiesAutowired();
 
-			using (IContainer metaContainer = metaBuilder.Build())
+			using IContainer metaContainer = metaBuilder.Build();
+			foreach (IModule module in metaContainer.Resolve<IEnumerable<IModule>>())
 			{
-				foreach (IModule module in metaContainer.Resolve<IEnumerable<IModule>>())
-				{
-					builder.RegisterModule(module);
-				}
+				builder.RegisterModule(module);
 			}
 
 			return builder;
