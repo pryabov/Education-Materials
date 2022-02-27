@@ -1,6 +1,5 @@
-﻿using System.Linq;
-using Microsoft.EntityFrameworkCore;
-using TrivialArchitecture.DAL.Entities.Cars;
+﻿using TrivialArchitecture.DAL.Entities.Cars;
+using TrivialArchitecture.DAL.Interfaces;
 using TrivialArchitecture.DAL.Repositories.Interfaces;
 
 namespace TrivialArchitecture.DAL.Repositories

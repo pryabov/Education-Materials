@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
+using TrivialArchitecture.DAL.Base;
+using TrivialArchitecture.DAL.Interfaces;
 using TrivialArchitecture.DAL.Repositories.Interfaces;
 
 namespace TrivialArchitecture.DAL.Repositories

@@ -1,22 +1,24 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using System.Reflection;
-using Microsoft.EntityFrameworkCore;
-using TrivialArchitecture.DAL.Entities.Books;
+using TrivialArchitecture.DAL.Base;
 using TrivialArchitecture.DAL.Entities.Cars;
+using TrivialArchitecture.DAL.Interfaces;
 
 namespace TrivialArchitecture.DAL
 {
-	public class TrivialArchitectureDbContext : DbContext
+	public class TrivialArchitectureDbContext: DbContext
 	{
 		public DbSet<CarDriver> CarDrivers { get; set; }
 
 		public DbSet<Car> Cars { get; set; }
 
-		public DbSet<Tag> Tags { get; set; }
+		private readonly string pathToDatabaseFile;
 
-		public DbSet<Book> Books { get; set; }
+		public TrivialArchitectureDbContext(string pathToDatabaseFile)
+		{
+			this.pathToDatabaseFile = pathToDatabaseFile;
+		}
 
 		// https://github.com/dotnet/efcore/issues/9662
 		public override int SaveChanges()
@@ -32,14 +34,6 @@ namespace TrivialArchitecture.DAL
 			}
 
 			return base.SaveChanges();
-		}
-
-		// public TrivialArchitectureDbContext() : base()
-		// {
-		// }
-
-		public TrivialArchitectureDbContext(DbContextOptions<TrivialArchitectureDbContext> options) : base(options)
-		{
 		}
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)

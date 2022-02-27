@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Autofac;
 using TrivialArchitecture.UI.Console.Utils.Interfaces;
 
 namespace TrivialArchitecture.UI.Console.Utils.ConsoleProcessing
