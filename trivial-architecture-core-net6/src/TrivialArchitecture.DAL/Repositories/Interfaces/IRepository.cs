@@ -1,10 +1,10 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
 
 namespace TrivialArchitecture.DAL.Repositories.Interfaces
 {
 	public interface IRepository<T> where T : class
 	{
-		IQueryable<T> GetAll();
+		IList<T> GetAll();
 
 		T GetById(long id);
 

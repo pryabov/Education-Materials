@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using TrivialArchitecture.DAL.Base;
+using TrivialArchitecture.DAL.Base.Enums;
+using TrivialArchitecture.DAL.Entities;
 using TrivialArchitecture.DAL.Interfaces;
 using TrivialArchitecture.DAL.Repositories.Interfaces;
 
 namespace TrivialArchitecture.DAL.Repositories
 {
-	public class BaseRepository<T> : IRepository<T> where T : class
+	public class BaseRepository<T> : IRepository<T> where T : class, IBaseEntity<long>
 	{
 		protected DbContext DbContext { get; set; }
 
@@ -19,14 +21,15 @@ namespace TrivialArchitecture.DAL.Repositories
 			DbSet = DbContext.Set<T>();
 		}
 
-		public virtual IQueryable<T> GetAll()
+		public virtual IList<T> GetAll()
 		{
 			return DbSet;
 		}
 
-		public virtual T GetById(long id)
+		public T GetById(long id)
 		{
-			return DbSet.Find(id);
+			T entity = DbSet.SingleOrDefault(entity => entity.Id == id);
+			return entity;
 		}
 
 		public virtual void Create(T entity)
@@ -43,7 +46,7 @@ namespace TrivialArchitecture.DAL.Repositories
 
 		public virtual bool Delete(long id)
 		{
-			T entity = GetById(id);
+			T entity = DbSet.SingleOrDefault(entity => entity.Id == id);
 			if (entity != null)
 			{
 				Delete(entity);
@@ -56,26 +59,6 @@ namespace TrivialArchitecture.DAL.Repositories
 		{
 			EntityEntry dbEntityEntry = DbContext.Entry(entity);
 			dbEntityEntry.State = EntityState.Deleted;
-		}
-
-		protected void RollBackChangesInContext()
-		{
-			List<EntityEntry> changedEntries = DbContext.ChangeTracker.Entries().Where(x => x.State != EntityState.Unchanged).ToList();
-			foreach (EntityEntry entry in changedEntries.Where(x => x.State == EntityState.Modified))
-			{
-				entry.CurrentValues.SetValues(entry.OriginalValues);
-				entry.State = EntityState.Unchanged;
-			}
-
-			foreach (EntityEntry entry in changedEntries.Where(x => x.State == EntityState.Added))
-			{
-				entry.State = EntityState.Detached;
-			}
-
-			foreach (EntityEntry entry in changedEntries.Where(x => x.State == EntityState.Deleted))
-			{
-				entry.State = EntityState.Unchanged;
-			}
 		}
 	}
 }

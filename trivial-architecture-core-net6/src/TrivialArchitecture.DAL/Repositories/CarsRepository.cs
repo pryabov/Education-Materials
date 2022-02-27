@@ -1,4 +1,5 @@
-﻿using TrivialArchitecture.DAL.Entities.Cars;
+﻿using System.Linq;
+using TrivialArchitecture.DAL.Entities.Cars;
 using TrivialArchitecture.DAL.Interfaces;
 using TrivialArchitecture.DAL.Repositories.Interfaces;
 
