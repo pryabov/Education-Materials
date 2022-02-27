@@ -11,9 +11,4 @@ namespace TrivialArchitecture.DAL.Base
 
 		public object Entity { get; set; }
 	}
-
-	public class EntityEntry<T> : EntityEntry
-	{
-
-	}
 }

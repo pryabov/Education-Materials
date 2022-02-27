@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TrivialArchitecture.DAL.Base;
+using TrivialArchitecture.DAL.Base.Enums;
 using TrivialArchitecture.DAL.Entities;
 
-namespace TrivialArchitecture.DAL.Interfaces
+namespace TrivialArchitecture.DAL.Base
 {
 	public class DbContext
 	{
-		private Dictionary<Type, List<EntityEntry>> state = new();
+		private readonly Dictionary<Type, List<EntityEntry>> state = new();
+
+		public bool IsLoaded { get; protected set; }
 
 		public DbSet<T> Set<T>() where T : class, IBaseEntity<long>
 		{
-			DbSet<T> result = new DbSet<T>(state[typeof(T)]);
+			DbSet<T> result = new DbSet<T>(this);
 			return result;
 		}
 
@@ -33,6 +33,31 @@ namespace TrivialArchitecture.DAL.Interfaces
 			}
 
 			throw new KeyNotFoundException();
+		}
+
+		public void Load()
+		{
+			if (!IsLoaded)
+			{
+				// TODO: Load from file
+			}
+		}
+
+		public void SaveChanges()
+		{
+			foreach (KeyValuePair<Type, List<EntityEntry>> keyValuePair in state)
+			{
+				List<EntityEntry> changedEntities =
+					keyValuePair.Value.Where(entity => entity.State
+						is EntityState.Added
+						or EntityState.Deleted
+						or EntityState.Modified).ToList();
+
+				if (changedEntities.Count > 0)
+				{
+					// TODO: Save
+				}
+			}
 		}
 	}
 }

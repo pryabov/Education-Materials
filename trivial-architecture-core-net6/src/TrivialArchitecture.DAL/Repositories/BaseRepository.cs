@@ -4,7 +4,6 @@ using System.Linq;
 using TrivialArchitecture.DAL.Base;
 using TrivialArchitecture.DAL.Base.Enums;
 using TrivialArchitecture.DAL.Entities;
-using TrivialArchitecture.DAL.Interfaces;
 using TrivialArchitecture.DAL.Repositories.Interfaces;
 
 namespace TrivialArchitecture.DAL.Repositories
@@ -34,8 +33,7 @@ namespace TrivialArchitecture.DAL.Repositories
 
 		public virtual void Create(T entity)
 		{
-			EntityEntry dbEntityEntry = DbContext.Entry(entity);
-			dbEntityEntry.State = EntityState.Added;
+			DbSet.Add(entity);
 		}
 
 		public virtual void Update(T entity)
