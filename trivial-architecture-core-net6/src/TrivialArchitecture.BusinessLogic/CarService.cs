@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using TrivialArchitecture.BusinessLogic.Interfaces;
 using TrivialArchitecture.DAL;
@@ -11,7 +12,7 @@ namespace TrivialArchitecture.BusinessLogic
 	{
 		public CarService(ITrivialArchitectureUow uow) : base(uow) { }
 
-		public IQueryable<Car> GetAll()
+		public IList<Car> GetAll()
 		{
 			return Uow.Cars.GetAll();
 		}

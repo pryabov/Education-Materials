@@ -1,5 +1,4 @@
 ﻿using Autofac;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using TrivialArchitecture.DAL;
 
@@ -13,15 +12,11 @@ namespace TrivialArchitecture.UI.Console.Infrastructure.IoC.Modules
 		{
 			base.Load(builder);
 
-			string connectionString = Сonfiguration.GetConnectionString("TrivialArchitectureDB");
+			string pathToDatabaseFile = Сonfiguration.GetConnectionString("TrivialArchitectureFileStorage");
 
-			var dbContextOptionsBuilder = new DbContextOptionsBuilder<TrivialArchitectureDbContext>()
-				.UseSqlServer(connectionString);
-		
 			builder
 				.RegisterType<TrivialArchitectureDbContext>()
-				.WithParameter("options", dbContextOptionsBuilder.Options)
-				.As<DbContext>()
+				.WithParameter("pathToDatabaseFile", pathToDatabaseFile)
 				.As<TrivialArchitectureDbContext>()
 				.InstancePerLifetimeScope();
 		}

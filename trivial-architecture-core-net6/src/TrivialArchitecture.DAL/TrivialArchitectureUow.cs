@@ -1,16 +1,14 @@
 ﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using TrivialArchitecture.DAL.Repositories.Interfaces;
 
 namespace TrivialArchitecture.DAL
 {
 	public class TrivialArchitectureUow : ITrivialArchitectureUow
 	{
-		private readonly DbContext dbContext;
+		private readonly TrivialArchitectureDbContext dbContext;
 		private readonly IServiceProvider serviceProvider;
 
-		public TrivialArchitectureUow(IServiceProvider serviceProvider, DbContext dbContext)
+		public TrivialArchitectureUow(IServiceProvider serviceProvider, TrivialArchitectureDbContext dbContext)
 		{
 			this.dbContext = dbContext;
 			this.serviceProvider = serviceProvider;
@@ -18,7 +16,7 @@ namespace TrivialArchitecture.DAL
 
 		#region Repositories
 
-		#region MsSQL
+		#region FileStorage
 
 		public ICarDriversRepository CarDrivers => GetRepository<ICarDriversRepository>();
 

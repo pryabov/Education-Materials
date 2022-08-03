@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using Microsoft.EntityFrameworkCore;
+using TrivialArchitecture.DAL.Base;
 using TrivialArchitecture.DAL.Entities.Cars;
 using TrivialArchitecture.DAL.Repositories.Interfaces;
 
